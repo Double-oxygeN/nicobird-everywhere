@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>nicobird-everywhere - CONFIG</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div class="main-frame">
+    <div class="header">
+      <div class="logo">
+        <h2>nicobird-everywhere</h2>
+      </div>
+      <div class="twitter-login-container">
+        <div class="login-indicator">
+          <div class="login-status">
+            <strong id="login-status">Please login.</strong>
+          </div>
+          <div class="login-logout-button">
+            <button type="button" id="login-logout-button">LOGIN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contents">
+      <div class="config-content query-config">
+        <h3>QUERY</h3>
+        <form class="query-form" id="query-form" onsubmit="return false;">
+          <label><input type="radio" name="query" value="user" checked disabled>User timeline</label>
+          <label><input type="radio" name="query" value="word" disabled>Word <input type="text" name="query" value="" placeholder="query" id="query-word" disabled></label>
+        </form>
+      </div>
+      <div class="config-content frame-size-config">
+        <h3>FRAME SIZE</h3>
+        <form class="frame-size-form" id="frame-size-form" onsubmit="return false;">
+          <label><input type="radio" name="size" value="medium" disabled>Medium</label>
+          <label><input type="radio" name="size" value="large" checked disabled>Large</label>
+          <label><input type="radio" name="size" value="custom" disabled>Custom <input type="number" name="size" value="960" id="custom-size-width" disabled>x<input type="number" name="size" value="540" id="custom-size-height" disabled></label>
+        </form>
+      </div>
+      <div class="config-content transparency-config">
+        <h3>TRANSPARENCY</h3>
+        <form class="transparency-form" id="transparency-form">
+          <label><input type="radio" name="transparency" value="1.0" checked disabled>None</label>
+          <label><input type="radio" name="transparency" value="0.6" disabled>Weak</label>
+          <label><input type="radio" name="transparency" value="0.4" disabled>Strong</label>
+        </form>
+      </div>
+      <div class="config-content shadow-config">
+        <h3>SHADOW</h3>
+        <form class="shadow-form" id="shadow-form">
+          <label><input type="radio" name="shadow" value="off" checked disabled>Off</label>
+          <label><input type="radio" name="shadow" value="on" disabled>On</label>
+        </form>
+      </div>
+    </div>
+    <div class="foot-buttons">
+      <div class="foot-button start-button">
+        <button type="button" id="ok-button" disabled>OK!</button>
+      </div>
+      <div class="foot-button reset-button">
+        <button type="button" id="reset-button" disabled>RESET</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

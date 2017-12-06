@@ -1,0 +1,22 @@
+{
+  "name": "nicobird-everywhere",
+  "version": "0.1.0",
+  "description": "nicobird everywhere",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/electron .",
+    "package": "./node_modules/.bin/electron-packager . --platform=darwin --arch=x64 --asar --overwrite"
+  },
+  "author": "Double_oxygeN",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "electron": "^1.7.9",
+    "electron-oauth-twitter": "^1.1.0",
+    "twitter": "^1.7.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^10.1.0"
+  }
+}

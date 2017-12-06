@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Maven Pro';
+  src: url('fonts/maven-pro/MavenPro-Medium.woff2');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Maven Pro';
+  src: url('fonts/maven-pro/MavenPro-Medium.woff2');
+  font-weight: bold;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  background-color: rgb(29, 161, 242);
+  font-family: 'Maven Pro';
+}
+
+.main-frame {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  background-color: hsl(203, 40%, 80%);
+}
+
+button {
+  display: table-cell;
+  height: 18px;
+  background-color: transparent;
+  border: 2px solid rgb(29, 161, 242);
+  padding: 0px 0.6em;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0;
+  appearance: none;
+  font-size: 12px;
+  font-family: 'Maven Pro';
+  transition: background-color 0.1s linear 0s;
+}
+
+button:hover, button:disabled:active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+button:active {
+  background-color: rgba(29, 161, 242, 0.8);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+input[type=text], input[type=number] {
+  border: none;
+  border-bottom: 1px solid gray;
+  background-color: inherit;
+  transition: border-bottom 0.2s linear 0s, background-color 0.3s linear 0s;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(29, 161, 242);
+  background-color: rgba(255, 255, 255, 0.5);
+}
