@@ -1,7 +1,7 @@
 {
   "name": "nicobird-everywhere",
-  "version": "0.1.0",
-  "description": "nicobird everywhere",
+  "version": "1.0.0",
+  "description": "Twitter client with niconico-like viewer.",
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
