@@ -20,15 +20,6 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
 const { loginTwitter, twitter } = require('./twitter.js');
-const logger = (({ Logger, transports }) => new Logger({
-  level: 'debug',
-  transports: [
-    new transports.Console({
-      colorize: true,
-      timestamp: true
-    })
-  ]
-}))(require('winston'));
 
 const defaultWindowOpt = {
   width: 480,
@@ -122,7 +113,7 @@ const createTimeLineWindow = createWindowBuilder({
         twitter.stream(opt.endpoint, opt.query, (twev) => {
           getWindow().webContents.send('twitter:status', twev);
         }, (error) => {
-          logger.error(error.description);
+          console.error(error.description);
         });
       });
     },

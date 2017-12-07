@@ -19,15 +19,6 @@
 require('./env.js')();
 const OauthTwitter = require('electron-oauth-twitter');
 const Twitter = require('twitter');
-const logger = (({ Logger, transports }) => new Logger({
-  level: 'debug',
-  transports: [
-    new transports.Console({
-      colorize: true,
-      timestamp: true
-    })
-  ]
-}))(require('winston'));
 
 const oauth = new OauthTwitter({
   key: process.env.TWITTER_CONSUMER_KEY,
@@ -51,7 +42,7 @@ const twitter = (() => {
         s.on('data', onData);
         s.on('error', onError);
       } else {
-        logger.error('Please login before streaming.');
+        console.error('Please login before streaming.');
       }
     },
     stopStream: () => {
@@ -64,11 +55,11 @@ const twitter = (() => {
       if (t !== null) {
         t.post('statuses/update', { status: str }, (error, tweet, response) => {
           if (!error) {
-            logger.info(`tweet ${str}`);
+            console.info(`tweet ${str}`);
           }
         });
       } else {
-        logger.error('Please login before tweeting.');
+        console.error('Please login before tweeting.');
       }
     },
     logout: () => {
