@@ -240,7 +240,6 @@ window.onload = () => {
   ipcRenderer.on('twitter:config', (ev, opt) => {
     alpha = opt.alpha;
     shadow = opt.shadow;
-    console.log(shadow);
   });
 
   ipcRenderer.on('twitter:transparentize', (ev, transparent) => {
