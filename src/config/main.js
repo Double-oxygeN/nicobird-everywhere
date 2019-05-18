@@ -66,10 +66,11 @@ window.onload = () => {
   });
 
   okButton.addEventListener('click', () => {
-    const endpoint = queryForm.query.value === 'user' ? 'user' : 'statuses/filter';
-    const query = endpoint === 'user' ? {} : { track: queryWordInput.value };
+    const endpoint = 'statuses/filter';
+    const query = { track: queryWordInput.value };
     const size = frameSizeForm.size.value === 'medium' ? { width: 640, height: 360 } :
-      frameSizeForm.size.value === 'large' ? { width: 854, height: 480 } : { width: window.parseInt(customSizeWidthInput.value, 10), height: window.parseInt(customSizeHeightInput.value, 10) };
+      frameSizeForm.size.value === 'large' ? { width: 854, height: 480 } :
+      { width: window.parseInt(customSizeWidthInput.value, 10), height: window.parseInt(customSizeHeightInput.value, 10) };
     const alpha = Number(transparencyForm.transparency.value);
     const shadow = shadowForm.shadow.value === 'on';
     ipcRenderer.send('config:start', {
