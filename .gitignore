@@ -1,4 +1,6 @@
 src/env.js
 node_modules/
 nicobird-everywhere-darwin-x64/
+nicobird-everywhere-win32-ia32/
+nicobird-everywhere-win32-x64/
 *.zip

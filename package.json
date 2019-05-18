@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/electron .",
-    "package": "./node_modules/.bin/electron-packager . --platform=darwin --arch=x64 --overwrite --prune --asar"
+    "package": "./node_modules/.bin/electron-packager . --platform=darwin --arch=x64 --overwrite --prune --asar",
+    "package-win": "./node_modules/.bin/electron-packager . --platform=win32 --arch=x64,ia32 --overwrite --prune --asar"
   },
   "author": "Double_oxygeN",
   "license": "Apache-2.0",
