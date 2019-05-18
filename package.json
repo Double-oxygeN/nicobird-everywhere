@@ -11,11 +11,11 @@
   "author": "Double_oxygeN",
   "license": "Apache-2.0",
   "dependencies": {
-    "electron": "^1.8.4",
+    "electron": "^1.8.8",
     "electron-oauth-twitter": "^1.2.0",
     "twitter": "^1.7.1"
   },
   "devDependencies": {
-    "electron-packager": "^10.1.2"
+    "electron-packager": "^13.1.1"
   }
 }
