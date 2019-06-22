@@ -94,6 +94,7 @@ const createTimeLineWindow = createWindowBuilder({
     height: 360,
     transparent: true,
     frame: false,
+    hasShadow: false,
     x: 0,
     y: 0
   },
