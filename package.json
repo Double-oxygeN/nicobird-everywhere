@@ -1,6 +1,6 @@
 {
   "name": "nicobird-everywhere",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Twitter client with niconico-like viewer.",
   "main": "src/main.js",
   "scripts": {
